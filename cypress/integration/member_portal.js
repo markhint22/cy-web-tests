@@ -1,6 +1,6 @@
  import {landing_page, sign_in_page} from "../support/pages";
 
-context('Member Portal POC Tests',() => {
+context('Member Portal Tests',() => {
     beforeEach(() => {
     })
 
