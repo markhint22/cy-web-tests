@@ -42,29 +42,28 @@ export class sign_in_page{
 export class sign_up_section{
 
 
-    insert_first_name(self, first_name="") {
-        element_locator = "";
-        try {
-            if (self.context.registration_version === 'galaxy') {
-                faker.name.firstName()
-                element_locator = GalaxyMemberRegistrationPageLocators.MEMBER_FIRST_NAME
-            }
-            else if (self.context.registration_version === '5'){
-                element_locator = locators.SignUpSection.FIRST_NAME_INPUT_v5
-            }
-            else if(self.context.registration_version === '4') {
-                element_locator = locators.SignUpSection.FIRST_NAME_INPUT
-            }
-        }
-        finally {
-                if(first_name === "")
-            {
-                first_name = self.context.registration_data.get('firstName')
-                self.fill_text(element_locator, first_name)
-                return first_name
-            }
-            }
-    }
+    // insert_first_name(self, first_name="") {
+    //     element_locator = "";
+    //     try {
+    //         if (self.context.registration_version === 'galaxy') {
+    //             element_locator = GalaxyMemberRegistrationPageLocators.MEMBER_FIRST_NAME
+    //         }
+    //         else if (self.context.registration_version === '5'){
+    //             element_locator = locators.SignUpSection.FIRST_NAME_INPUT_v5
+    //         }
+    //         else if(self.context.registration_version === '4') {
+    //             element_locator = locators.SignUpSection.FIRST_NAME_INPUT
+    //         }
+    //     }
+    //     finally {
+    //             if(first_name === "")
+    //         {
+    //             first_name = self.context.registration_data.get('firstName')
+    //             self.fill_text(element_locator, first_name)
+    //             return first_name
+    //         }
+    //         }
+    // }
 
 
 
